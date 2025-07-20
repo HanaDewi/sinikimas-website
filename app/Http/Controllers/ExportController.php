@@ -661,7 +661,7 @@ class ExportController extends Controller
                     $pdf->setPaper('A4', 'landscape');
                     return $pdf->stream();
                 } else if ($request->export == "excel") {
-                    return Excel::download(new SinikimasExport($akun_puskesmas, $tahun, $bulan, $jenisCakupan, $jenisIndikator, $jenisSubindikator), 'Data_Laporan_Sinikimas_PKP.xlsx');
+                    return Excel::download(new SinikimasExport($akun_puskesmas, $tahun, $bulan, ), 'Data_Laporan_Sinikimas_PKP.xlsx');
                 }
             }
 
